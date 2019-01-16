@@ -1,0 +1,14 @@
+<h1> Result 페이지 입니다. </h1>
+
+<h2>당신이 입력한 단어의 개수는 총 {{total}} 개 입니다.</h2>
+
+<a href="{% url 'home' %}">GO HOME</a>
+<br><br>
+<!-- {{ text }} -->
+<h4>입력한 문장: {{text}}</h4>
+<p>
+{% for word, count in word_dictionary %}
+    {{ word }} : {{ count }} 개
+    <br>
+{% endfor %}
+</p>
